@@ -12,12 +12,16 @@ import { OutputNode } from './nodes/outputNode';
 import { TextNode } from './nodes/textNode';
 
 import 'reactflow/dist/style.css';
+import { InputNode2 } from './nodes/inputNode2';
+import { LLMNode2 } from './nodes/llmNode2';
 
 const gridSize = 20;
 const proOptions = { hideAttribution: true };
 const nodeTypes = {
   customInput: InputNode,
+  customInput2: InputNode2,
   llm: LLMNode,
+  llm2: LLMNode2,
   customOutput: OutputNode,
   text: TextNode,
 };
