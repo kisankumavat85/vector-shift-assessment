@@ -2,9 +2,9 @@ import { Handle, Position } from "reactflow";
 import "./baseNode.css";
 
 export const BaseNode = (props) => {
-  const { title, inputs, outputs, children } = props;
+  const { title, inputs, outputs, children, className } = props;
   return (
-    <div className="relative w-[200px] min-h-[80px] bg-white border border-gray-300 rounded-lg shadow-md">
+    <div className={`relative min-w-[200px] min-h-[80px] bg-white border border-gray-300 rounded-lg shadow-md ${className || ''}`}>
       {inputs &&
         inputs.map((input) => (
           <Handle
