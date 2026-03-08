@@ -25,8 +25,8 @@ export const ConditionNode = ({ id, data }) => {
         },
       ]}
     >
-      <div>
-        <span>This is condition</span>
+      <div className="text-xs text-gray-500 px-1">
+        <span>Routes on condition</span>
       </div>
     </BaseNode>
   );

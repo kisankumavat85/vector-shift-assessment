@@ -11,10 +11,10 @@ export const NoteNode = ({ id, data }) => {
 
   return (
     <BaseNode title="Note" inputs={[]} outputs={[]}>
-      <div>
-        <label>
+      <div className="text-xs">
+        <label className="flex flex-col gap-1">
           Note:
-          <textarea type="file" value={note} onChange={handleNoteChange} />
+          <textarea className="border border-gray-300 rounded px-1 w-full resize-none" rows={3} value={note} onChange={handleNoteChange} />
         </label>
       </div>
     </BaseNode>

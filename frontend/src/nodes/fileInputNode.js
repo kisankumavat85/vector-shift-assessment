@@ -14,9 +14,9 @@ export const FileInputNode = ({ id, data }) => {
 
   return (
     <BaseNode outputs={[{id: `${id}-input`}]} >
-      <label>
+      <label className="flex flex-col gap-1 text-xs">
         File:
-        <input type="file" value={file} onChange={handleFileChange} />
+        <input className="text-xs" type="file" onChange={handleFileChange} />
       </label>
     </BaseNode>
   );

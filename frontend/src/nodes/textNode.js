@@ -12,10 +12,10 @@ export const TextNode = ({ id, data }) => {
 
   return (
     <BaseNode title="Text" outputs={[{ id: `${id}-output` }]}>
-      <div>
-        <label>
+      <div className="text-xs">
+        <label className="flex items-center gap-1">
           Text:
-          <input type="text" value={currText} onChange={handleTextChange} />
+          <input className="border border-gray-300 rounded px-1 w-full" type="text" value={currText} onChange={handleTextChange} />
         </label>
       </div>
     </BaseNode>

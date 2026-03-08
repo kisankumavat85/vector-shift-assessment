@@ -30,13 +30,13 @@ export const TransformNode = ({ id, data }) => {
         },
       ]}
     >
-      <div>
-        <label>
-          Method:
-          <select value={transformation} onChange={handleTransformationChange}>
-            {transformations.map((transformation) => (
-              <option key={transformation.value} value={transformation.value}>
-                {transformation.label}
+      <div className="text-xs">
+        <label className="flex items-center gap-1">
+          Transform:
+          <select className="border border-gray-300 rounded px-1 w-full" value={transformation} onChange={handleTransformationChange}>
+            {transformations.map((t) => (
+              <option key={t.value} value={t.value}>
+                {t.label}
               </option>
             ))}
           </select>

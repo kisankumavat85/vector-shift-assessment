@@ -41,13 +41,13 @@ export const ApiNode = ({ id, data }) => {
         },
       ]}
     >
-      <div>
-        <label>
+      <div className="text-xs">
+        <label className="flex items-center gap-1">
           Method:
-          <select value={method} onChange={handleMethodChange}>
-            {methods.map((method) => (
-              <option key={method.value} value={method.value}>
-                {method.label}
+          <select className="border border-gray-300 rounded px-1 w-full" value={method} onChange={handleMethodChange}>
+            {methods.map((m) => (
+              <option key={m.value} value={m.value}>
+                {m.label}
               </option>
             ))}
           </select>
