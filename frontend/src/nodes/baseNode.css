@@ -1,0 +1,14 @@
+.react-flow__handle[data-output-label]::after {
+  content: attr(data-output-label);
+  white-space: nowrap;
+  font-size: 8px;
+  margin-left: 8px;
+  border: '1px solid black';
+}
+
+.react-flow__handle[data-input-label]::before {
+  content: attr(data-input-label);
+  white-space: nowrap;
+  font-size: 8px;
+  margin-right: 8px;
+}

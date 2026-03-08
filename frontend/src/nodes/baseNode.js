@@ -1,4 +1,5 @@
 import { Handle, Position } from "reactflow";
+import "./baseNode.css";
 
 export const BaseNode = (props) => {
   const { title, inputs, outputs, children } = props;
@@ -11,7 +12,12 @@ export const BaseNode = (props) => {
             type="target"
             position={Position.Left}
             id={input.id}
-            style={input.style}
+            style={{
+              display: "flex",
+              flexDirection: "row-reverse",
+              ...input.style,
+            }}
+            data-input-label={input?.label}
           />
         ))}
 
@@ -28,7 +34,11 @@ export const BaseNode = (props) => {
             type="source"
             position={Position.Right}
             id={output.id}
-            style={output?.style}
+            style={{
+              display: "flex",
+              ...output.style,
+            }}
+            data-output-label={output?.label}
           />
         ))}
     </div>
